@@ -24,9 +24,19 @@ class CalcController {
      }
 
      clearAll(){ //metodo
+      this._operation = [];
+     }
 
+     clearEntry(){ //metodo
+      this._operation.pop();
+     }
 
+     addOperation (value){ //metodo
+      this._operation.push(value);
+     }
 
+     clearSetError(){ //metodo
+      this.displayCalc = "Error";
      }
 
      execBtn(value){
@@ -38,40 +48,36 @@ class CalcController {
             break;
 
          case 'CE':
-            this.clearAll();
+            this.clearEntry();
             break;
 
          case '-':
-            this.clearAll();
+            
             break; 
             
          case '+':
-            this.clearAll();
+            
             break;
             
          case '/':
-            this.clearAll();
+            
             break;
 
          case '*':
-            this.clearAll();
+            
             break;
 
          case '=':
-            this.clearAll();
+            
             break;
 
          case '%':
-            this.clearAll();
+            
             break;
 
-         case '':
-            this.clearAll();
+         default:
+            this.setError();
             break;
-
-            default:
-               this.setError();
-               break;
       }
      }
 
