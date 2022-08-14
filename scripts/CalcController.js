@@ -27,7 +27,7 @@ class CalcController {
       this._operation = [];
      }
 
-     clearEntry(){ //metodo
+     clearEntry(){ //metodo //teste commit
       this._operation.pop();
      }
 
