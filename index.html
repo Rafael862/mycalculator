@@ -115,49 +115,73 @@
         <div id="calculadora">
             <header>
                 <div id="display">
-                    0
+                    
                 </div>
             </header>
             <section class="container">
                 <div class="row">
-                    <button type="button" class="btn btn-others col-sm">%</button>
-                    <button type="button" class="btn btn-others col-sm">√</button>
-                    <button type="button" class="btn btn-others col-sm">x²</button>
-                    <button type="button" class="btn btn-others col-sm">¹/x</button>
+                    <button type="button" onclick = "insert('%')" class="btn btn-others col-sm">%</button>
+                    <button type="button" onclick = "insert('')" class="btn btn-others col-sm">√</button>
+                    <button type="button" onclick = "insert('')" class="btn btn-others col-sm">x²</button>
+                    <button type="button" onclick = "insert('')" class="btn btn-others col-sm">¹/x</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-others col-sm">CE</button>
-                    <button type="button" class="btn btn-others col-sm">C</button>
-                    <button type="button" class="btn btn-others col-sm">←</button>
-                    <button type="button" class="btn btn-others col-sm">÷</button>
+                    <button type="button" onclick = "insert('CE')" class="btn btn-others col-sm">CE</button>
+                    <button type="button" onclick = "clean()" class="btn btn-others col-sm">C</button>
+                    <button type="button" onclick = "back()" class="btn btn-others col-sm">←</button>
+                    <button type="button" onclick = "insert('/')" class="btn btn-others col-sm">÷</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-number btn7 col-sm">7</button>
-                    <button type="button" class="btn btn-number btn8 col-sm">8</button>
-                    <button type="button" class="btn btn-number btn9 col-sm">9</button>
-                    <button type="button" class="btn btn-others btnX col-sm">X</button>
+                    <button type="button" onclick = "insert('7')" class="btn btn-number btn7 col-sm">7</button>
+                    <button type="button" onclick = "insert('8')" class="btn btn-number btn8 col-sm">8</button>
+                    <button type="button" onclick = "insert('9')" class="btn btn-number btn9 col-sm">9</button>
+                    <button type="button" onclick = "insert('*')" class="btn btn-others btnX col-sm">X</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-number btn4 col-sm">4</button>
-                    <button type="button" class="btn btn-number btn5 col-sm">5</button>
-                    <button type="button" class="btn btn-number btn6 col-sm">6</button>
-                    <button type="button" class="btn btn-others btn- col-sm">-</button>
+                    <button type="button" onclick = "insert('4')" class="btn btn-number btn4 col-sm">4</button>
+                    <button type="button" onclick = "insert('5')" class="btn btn-number btn5 col-sm">5</button>
+                    <button type="button" onclick = "insert('6')" class="btn btn-number btn6 col-sm">6</button>
+                    <button type="button" onclick = "insert('-')" class="btn btn-others btn- col-sm">-</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-number btn1 col-sm">1</button>
-                    <button type="button" class="btn btn-number btn2 col-sm">2</button>
-                    <button type="button" class="btn btn-number btn3 col-sm">3</button>
-                    <button type="button" class="btn btn-others btn+ col-sm">+</button>
+                    <button type="button" onclick = "insert('1')" class="btn btn-number btn1 col-sm">1</button>
+                    <button type="button" onclick = "insert('2')" class="btn btn-number btn2 col-sm">2</button>
+                    <button type="button" onclick = "insert('3')" class="btn btn-number btn3 col-sm">3</button>
+                    <button type="button" onclick = "insert('+')" class="btn btn-others btn+ col-sm">+</button>
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-others col-sm">±</button>
-                    <button type="button" class="btn btn-number col-sm">0</button>
-                    <button type="button" class="btn btn-others col-sm">,</button>
-                    <button type="button" class="btn btn-others col-sm">=</button>
+                    <button type="button" onclick = "insert('+-')" class="btn btn-others col-sm">±</button>
+                    <button type="button" onclick = "insert('0')" class="btn btn-number col-sm">0</button>
+                    <button type="button" onclick = "insert('.')" class="btn btn-others col-sm">,</button>
+                    <button type="button" onclick = "calcular()" class="btn btn-others col-sm">=</button>
                 </div>
             </section>
         </div>
     </div>
+  <!--  <script>  FAZENDO O CÁLCULO DA FORMA MAIS SIMPLES
+        function insert(num){
+           var numero = document.getElementById('display').innerHTML;
+           document.getElementById('display').innerHTML = numero + num;
+        }
+
+        function clean(){
+            document.getElementById('display').innerHTML = '';
+        }
+
+        function back(){
+            var display = document.getElementById('display').innerHTML;
+            document.getElementById('display').innerHTML = display.substring(0, display.length -1);
+        }
+
+        function calcular(){
+            var display = document.getElementById('display').innerHTML;
+            if (display){
+                document.getElementById('display').innerHTML = eval(display)
+            } else {
+                document.getElementById('display').innerHTML = "Nada para calcular";
+            }
+        }
+    </script>-->
 <script src="scripts/CalcController.js"></script>
 <script src="scripts/calculator.js"></script>
 </body>
