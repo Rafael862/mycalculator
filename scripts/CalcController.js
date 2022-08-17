@@ -1,5 +1,5 @@
 class CalcController {
-/*
+
      //classe tem atributos e métodos
 
      constructor(){ //tudo do construtor é executado automaticamente
@@ -98,22 +98,15 @@ class CalcController {
 
      initButtonsEvents(){
 
-      let buttons = document.querySelectorAll(".row > button");  
+      let buttons = document.querySelectorAll(".row > #btn1");  
 
-      buttons.forEach((btn, index)=>{
+      buttons.forEach(btn=>{
 
-         this.addEventListenerAll(btn, "click drag", e =>{
-           let textBtn = btn.textContent;
-
-           this.execBtn();
+         btn.addEventListenerAll("click", e => {
+           console.log(e);
          });
 
-         this.addEventListenerAll(btn, "mouseover mouseup mousedown", e =>{
-
-            btn.getElementsByClassName.cursor = "pointer";
-
-         });
-
+         
       });
    }
 
@@ -129,17 +122,6 @@ class CalcController {
 
          this._displayCalcEl.innerHTML = valor; //insere no html o valor que foi recebido
 
-     }*/
+     }
     
-    constructor() {
-      this.insert() = document.getElementById('display');
-     }
-     
-     insert(num){
-      this.insert().innerHTML = num;
-      
-     }
-
-
-
 }
